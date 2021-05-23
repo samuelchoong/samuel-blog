@@ -3,6 +3,7 @@ import React from "react"
 import { graphql,Link } from "gatsby"
 import BlogListing from "../components/BlogListing"
 import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 
 export default function BlogsPaginated({pageContext,data}) {
     const {currentPage,numOfPages} = pageContext
@@ -18,6 +19,10 @@ export default function BlogsPaginated({pageContext,data}) {
 
     return (
         <Layout>
+            <Seo 
+                title="Blogs"
+                description="Documenting the process of create it"
+            />
             <BlogListing blogs={nodes}></BlogListing>
             <Link 
                 className="button is-small" 

@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Samuel Blog",
+    title: "Samuel Choong",
+    description: "Documenting the evolution of web programming and the guy who chase after it",
     body: {
       content: "Just some SEO content"
     }

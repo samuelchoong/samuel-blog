@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql,Link } from "gatsby"
 import Layout from "../components/Layout"
 import FeaturedBlog from "../components/FeaturedBlog"
 import BlogListing from "../components/BlogListing"
@@ -10,7 +10,10 @@ export default function IndexPage({data,pageContext}) {
     const {nodes} = data.allMarkdownRemark
     return (
         <Layout>
-            <Seo/>
+            <Seo
+                title="Home"
+                description="Software engineer and tech entrepreneur. Documenting the process while creating multi-winning products"
+            />
            <div className="columns">
                {
                    nodes.slice(0,2).map(node=>
@@ -25,6 +28,9 @@ export default function IndexPage({data,pageContext}) {
                     blogs={nodes}
                     search={() => <SearchContainer searchIndex={pageContext.searchIndex}/> }
                />
+               <Link className="button is-small is-success is-outlined" to="/blogs">
+                   Read more
+               </Link>
            </div>
         </Layout>
     )
