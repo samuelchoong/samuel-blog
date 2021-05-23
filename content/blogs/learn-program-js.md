@@ -4,6 +4,7 @@ subtitle: "learn programming is js is super cool"
 date: "2021-10-10"
 slug: "custom-learn-program-js"
 author: "Samuel"
+rating: 2.5
 ---
 
 ## Emphasis
@@ -17,6 +18,16 @@ __This is bold text__
 _This is italic text_
 
 ~~Strikethrough~~
+
+Syntax highlighting
+
+``` js
+var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+```
 
 
 ## Blockquotes

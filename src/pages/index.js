@@ -1,7 +1,9 @@
 import React from "react"
-import { graphql,Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import FeaturedBlog from "../components/FeaturedBlog"
+import BlogListing from "../components/BlogListing"
+import SearchContainer from "../components/SearchContainer"
 
 export default function IndexPage({data}) {
     const {nodes} = data.allMarkdownRemark
@@ -16,13 +18,22 @@ export default function IndexPage({data}) {
                    )
                }
            </div>
+           <div className="p-4">
+               <BlogListing 
+                    blogs={nodes}
+                    search={SearchContainer}
+               />
+           </div>
         </Layout>
     )
 }
 
 export const query = graphql`
     query MyQuery{
-        allMarkdownRemark {
+        allMarkdownRemark(
+            limit: 3
+            sort: { order: DESC, fields: frontmatter___rating}
+        ) {
             nodes {
                 id
                 frontmatter {

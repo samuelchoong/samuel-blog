@@ -1,0 +1,13 @@
+{
+    "blogs":[
+        {
+            "slug": "angular-frameworl-intro",
+            "title": "Angular Framework Introduction",
+            "subtitle": "learn angular framework can be good to u"
+        },{
+            "slug": "js-design-pattern",
+            "title": "Javascript Design Pattern",
+            "subtitle": "learn something design patter still cool"
+        }
+    ]
+}

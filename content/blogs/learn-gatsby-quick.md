@@ -4,6 +4,7 @@ subtitle: "learn Gatby now"
 date: "2021-10-12"
 slug: "custom-learn-gatsby-fast"
 author: "Samuel"
+rating: 4.4
 ---
 # h1 Heading 8-)
 ## h2 Heading
