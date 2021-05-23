@@ -1,24 +1,43 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useCallback } from "react"
+import * as JsSearch from "js-search"
 import * as styles from "./SearchContainer.module.scss"
-import searchIndex from "./searchIndex.json"
+import { navigate } from "gatsby"
 
-export default function SearchContainer() {
+export default function SearchContainer({searchIndex}) {
   const [search, setSearch] = useState({
-    results: [{
-      slug: "blog-1",
-      title: "blog 1 title",
-      subtitle: "blog 1 subtitle"
-    }, {
-      slug: "blog-2",
-      title: "blog 2 title",
-      subtitle: "blog 2 subtitle"
-    }]
+    results: [],
+    engine: {},
+    query: ""
   })
+
+  const rebuildIndex = useCallback(() => {
+    const searchEngine = new JsSearch.Search("slug")
+    searchEngine.sanitizer = new JsSearch.LowerCaseSanitizer()
+    searchEngine.indexStrategy = new JsSearch.PrefixIndexStrategy()
+    searchEngine.searchIndex = new JsSearch.TfIdfSearchIndex("slug");
+
+    searchEngine.addIndex("title")
+    searchEngine.addIndex("subtitle")
+    searchEngine.addDocuments(searchIndex.blogs)
+
+    setSearch(search => ({...search, engine: searchEngine}))
+  }, [searchIndex])
+
+  useEffect(() => {
+    rebuildIndex();
+  }, [rebuildIndex])
+
+  const performSearch = (e) => {
+    const searchValue = e.target.value
+    const results = search.engine.search(searchValue)
+    setSearch({...search,query: searchValue, results})
+  }
 
   return (
     <div>
-      {JSON.stringify(searchIndex)}
       <input
+        onChange={performSearch}
+        value={search.query}
         style={{width: "200px"}}
         className="input"
         type="text"
@@ -29,6 +48,7 @@ export default function SearchContainer() {
           <ul>
             { search.results.map(result => (
               <li
+                onClick={()=>{ navigate(`/blogs/${result.slug}`) }}
                 role='presentation'
                 key={result.slug}
                 className={`${styles.option} p-2`}>

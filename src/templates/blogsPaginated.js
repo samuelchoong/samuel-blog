@@ -5,7 +5,7 @@ import BlogListing from "../components/BlogListing"
 import Layout from "../components/Layout"
 
 export default function BlogsPaginated({pageContext,data}) {
-    const {limit,currentPage,numOfPages} = pageContext
+    const {currentPage,numOfPages} = pageContext
     const { nodes } = data.allMarkdownRemark
 
     const isFirst = currentPage === 1

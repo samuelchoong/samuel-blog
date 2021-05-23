@@ -4,11 +4,13 @@ import Layout from "../components/Layout"
 import FeaturedBlog from "../components/FeaturedBlog"
 import BlogListing from "../components/BlogListing"
 import SearchContainer from "../components/SearchContainer"
+import Seo from "../components/Seo"
 
-export default function IndexPage({data}) {
+export default function IndexPage({data,pageContext}) {
     const {nodes} = data.allMarkdownRemark
     return (
         <Layout>
+            <Seo/>
            <div className="columns">
                {
                    nodes.slice(0,2).map(node=>
@@ -21,7 +23,7 @@ export default function IndexPage({data}) {
            <div className="p-4">
                <BlogListing 
                     blogs={nodes}
-                    search={SearchContainer}
+                    search={() => <SearchContainer searchIndex={pageContext.searchIndex}/> }
                />
            </div>
         </Layout>
