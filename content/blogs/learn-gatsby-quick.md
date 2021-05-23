@@ -3,6 +3,7 @@ title: Learn Gatsby fast
 subtitle: "learn Gatby now"
 date: "2021-10-12"
 slug: "custom-learn-gatsby-fast"
+author: "Samuel"
 ---
 # h1 Heading 8-)
 ## h2 Heading
