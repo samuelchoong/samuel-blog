@@ -41,5 +41,23 @@ module.exports = {
       }
     },
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Samuel Blog`,
+        short_name: `Samuel Blog`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: "src/images/icon.png"
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about-us/`, `/projects/*`],
+      },
+    },
   ],
 };
