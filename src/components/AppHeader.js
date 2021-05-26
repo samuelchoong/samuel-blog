@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from "gatsby";
+import ThemeToggle from './ThemeToggle'
+import {useTheme} from './ThemeProvider'
 
 export default function AppHeader({seo}) {
-
+  const theme = useTheme()
+  console.log(theme)
   return (
     <nav className="navbar is-transparent mb-5 p-5">
       <div className="navbar-brand">
@@ -29,6 +32,7 @@ export default function AppHeader({seo}) {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="field is-grouped">
+              <ThemeToggle className="is-flex is-align-self-center mr-5"/>
               <p className="control">
                 <a
                   className="bd-tw-button button"
