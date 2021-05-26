@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import {useStaticQuery,graphql} from "gatsby"
 
-export default function Seo ({title,description,meta=[]}) {
+export default function Seo ({title,description,image,meta=[]}) {
     const {site} = useStaticQuery(
         graphql`
             query{
@@ -18,6 +18,7 @@ export default function Seo ({title,description,meta=[]}) {
 
     const defaultTitle = title ? `${title} | ${site.siteMetadata?.title}` : site.siteMetadata?.title
     const defaultDescription = description || site.siteMetadata?.description
+    const defaultImage = image || "https://cdn.yassjobs.com/sc/sc_logo_lg.png"
     return (
         <Helmet
             htmlAttributes={{
@@ -43,7 +44,7 @@ export default function Seo ({title,description,meta=[]}) {
                 },
                 {
                     name: "og:image",
-                    content: "https://cdn.yassjobs.com/sc/sc_logo_lg.png"
+                    content: defaultImage
                 },
                 {
                     name: "twitter:card",

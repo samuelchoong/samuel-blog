@@ -5,6 +5,7 @@ date: "2021-10-12"
 slug: "custom-learn-gatsby-fast"
 author: "Samuel"
 rating: 4.4
+coverImage: "https://sgp1.digitaloceanspaces.com/yass/sc/laravel-livewire.png"
 ---
 # h1 Heading 8-)
 ## h2 Heading

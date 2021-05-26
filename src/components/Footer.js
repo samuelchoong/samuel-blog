@@ -22,6 +22,9 @@ export default function Footer(props) {
           <div className="level-item has-text-centered">
             <Copyright />
           </div>
+          <div className="level-item has-text-centered">
+            <a href={`https://feedspot.com/infiniterss.php?q=site:${process.env.BASE_URL}/rss.xml`} target="__blank" rel="noreferrer">Follow RSS</a>
+          </div>
         </nav>
       </div>
     </footer>

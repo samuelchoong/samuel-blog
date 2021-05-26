@@ -5,6 +5,7 @@ date: "2021-10-10"
 slug: "custom-learn-program-js"
 author: "Samuel"
 rating: 2.5
+coverImage: "https://sgp1.digitaloceanspaces.com/yass/sc/laravel-livewire.png"
 ---
 
 ## Emphasis
