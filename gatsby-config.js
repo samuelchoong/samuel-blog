@@ -14,6 +14,15 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-M72MH2V",
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "gatsby" }
+      },
+    },
     {
       resolve: "gatsby-plugin-feed",
       options: rss.options
@@ -50,7 +59,18 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: "src/images/icon.png"
+        icon: "src/images/icon.png",
+        icons:[{
+          src: "src/images/icon.png",
+          sizes: "512x512",
+          type: "image/png",
+          purpose: "main maskable icon"
+        },{
+          src: "src/images/maskable_icon_x192.png",
+          sizes: "192x192",
+          type: "image/png",
+          purpose: "suppress maskable issue"
+        }]
       },
     },
     {

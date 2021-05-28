@@ -8,6 +8,7 @@ rating: 4.5
 coverImage: "https://sgp1.digitaloceanspaces.com/yass/sc/laravel-livewire.png"
 ---
 
+![alt text](https://sgp1.digitaloceanspaces.com/yass/sc/laravel-livewire.png "Post Thumbnail")
 ## learn something design patter still cool
 
 learn something design patter still cool

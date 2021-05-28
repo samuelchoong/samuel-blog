@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from "gatsby";
 import ThemeToggle from './ThemeToggle'
-import {useTheme} from './ThemeProvider'
 
 export default function AppHeader({seo}) {
-  const theme = useTheme()
-  console.log(theme)
+  const twitterMessage = seo?.title ? `Check out my latest publish article "${seo.title}"` : "Join my newsletter for more latest update!"
+  const twitterUrl = seo?.url || ""
   return (
     <nav className="navbar is-transparent mb-5 p-5">
       <div className="navbar-brand">
         <Link className="navbar-item" to="/">
-          <h1 className="title">CODE_SPACE</h1>
+          <h1 className="title">Samuel Choong</h1>
         </Link>
         <div className="navbar-burger" data-target="navbarExampleTransparentExample">
           <span></span>
@@ -38,10 +37,10 @@ export default function AppHeader({seo}) {
                   className="bd-tw-button button"
                   data-social-network="Twitter"
                   data-social-action="tweet"
-                  data-social-target="https://eincode.com"
+                  data-social-target="https://samuelchoong.com"
                   rel="noreferrer"
                   target="_blank"
-                  href={`https://twitter.com/intent/tweet?text=Hello World&hashtags=eincode&url=https://eincode.com`}>
+                  href={`https://twitter.com/intent/tweet?text=${twitterMessage}&hashtags=scblog&url=${process.env.BASE_URL}/${twitterUrl}`}>
                   <span>
                     Tweet
                   </span>

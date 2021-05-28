@@ -7,8 +7,7 @@ author: "Samuel"
 rating: 2.5
 coverImage: "https://sgp1.digitaloceanspaces.com/yass/sc/laravel-livewire.png"
 ---
-
-## Emphasis
+![alt text](https://sgp1.digitaloceanspaces.com/yass/sc/laravel-livewire.png "Post Thumbnail")## Emphasis
 
 **This is bold text**
 

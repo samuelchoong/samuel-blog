@@ -8,6 +8,7 @@ rating: 3
 coverImage: "https://sgp1.digitaloceanspaces.com/yass/sc/laravel-livewire.png"
 ---
 
+![alt text](https://sgp1.digitaloceanspaces.com/yass/sc/laravel-livewire.png "Post Thumbnail")
 ## Angular Framework Introduction
 
 learn angular framework can be good to u
