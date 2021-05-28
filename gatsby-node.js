@@ -1,7 +1,7 @@
 
 const axios = require('axios')
 
-const searchIndex = require("./data/searchIndex.json")
+const searchIndex = require("./src/data/searchIndex.json")
 
 exports.onCreatePage = ({page,actions}) => {
     const {createPage,deletePage} = actions

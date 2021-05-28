@@ -1,4 +1,4 @@
-const rss = require("./utils/rss-options")
+const rss = require("./src/utils/rss-options")
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,

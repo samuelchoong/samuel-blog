@@ -25,7 +25,7 @@ collections:
     files:
       - label: "Contact Info"
         name: contact_info
-        file: site/settings/contact_info.json
+        file: src/data/config.json
         fields:
           - {label: "Phone", name: "phone", widget: "string"}
           - {label: "Email", name: "email", widget: "string"}
