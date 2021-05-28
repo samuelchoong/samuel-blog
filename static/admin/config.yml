@@ -20,3 +20,18 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list", required: false}
+  - name: "settings"
+    label: "Setting"
+    files:
+      - label: "Contact Info"
+        name: contact_info
+        file: site/settings/contact_info.json
+        fields:
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - label: "Address"
+            name: "address"
+            widget: "object"
+            fields:
+              - {label: "Street", name: "street", widget: "string"}
+              - {label: "City", name: "city", widget: "string"}
