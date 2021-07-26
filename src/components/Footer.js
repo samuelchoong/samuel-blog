@@ -6,7 +6,7 @@ function Copyright() {
     <footer>
       {'Copyright © '}
       <Link color="inherit" to="/">
-        CODE_SPACE
+        Samuel Choong
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}

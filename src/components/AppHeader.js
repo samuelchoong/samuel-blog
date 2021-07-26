@@ -6,10 +6,10 @@ export default function AppHeader({seo}) {
   const twitterMessage = seo?.title ? `Check out my latest publish article "${seo.title}"` : "Join my newsletter for more latest update!"
   const twitterUrl = seo?.url || ""
   return (
-    <nav className="navbar is-transparent mb-5 p-5">
+    <nav className="navbar is-transparent">
       <div className="navbar-brand">
         <Link className="navbar-item" to="/">
-          <h1 className="title">Samuel Choong</h1>
+          <h3 className="title">Samuel Choong</h3>
         </Link>
         <div className="navbar-burger" data-target="navbarExampleTransparentExample">
           <span></span>
@@ -20,11 +20,17 @@ export default function AppHeader({seo}) {
 
       <div id="navbarExampleTransparentExample" className="navbar-menu">
         <div className="navbar-start">
-          <Link className="navbar-item" to="/">
-            Home
-          </Link>
           <Link className="navbar-item" to="/blogs">
-            Blogs
+            Blog
+          </Link>
+          <Link className="navbar-item" to="/snippets">
+            Snippets
+          </Link>
+          <Link className="navbar-item" to="/portfolios">
+            Portfolios
+          </Link>
+          <Link className="navbar-item" to="/about-me">
+            About me
           </Link>
         </div>
 
@@ -46,11 +52,11 @@ export default function AppHeader({seo}) {
                   </span>
                 </a>
               </p>
-              <p className="control">
+              {/* <p className="control">
                 <a className="button is-primary" href="/">
                   <span>Login</span>
                 </a>
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

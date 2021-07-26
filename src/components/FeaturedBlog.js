@@ -1,37 +1,20 @@
 import React from 'react';
-import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image"
 
-const style = {
-  time: {
-    fontSize: "12px"
-  }
-}
-
-export default function FeaturedBlog({blog}) {
-  const { title, subtitle, date, slug, author } = blog.frontmatter;
+export default function FeaturedBlog() {
 
   return (
-    <div className="card">
-      <div className="card-content">
-        <div className="media">
-          <div className="media-content">
-            <p className="title is-4">{title}</p>
-            <p className="subtitle is-6">{author}</p>
-          </div>
-        </div>
-        <div className="content mb-1">
-          {subtitle}
-          <br />
-          <time
-            style={style.time}
-            dateTime={style.time}>{date}</time>
-        </div>
-        <Link
-          to={`/blogs/${slug}`}
-          className="button is-light is-link is-small">
-          Continue reading
-        </Link>
-      </div>
+    <div class="columns">
+    <div class="column is-4">
+      <figure class="image">
+        <StaticImage src="../images/home.jpeg" alt="main profile image"/>
+      </figure>
     </div>
+    <div class="column is-8">
+        <p className="title is-4">I'm Samuel Choong</p>
+        <p className="subtitle is-6">I'm a software engineer and writer. Main purpose of this website is to document what I've learned time by time and marked the evolution of web programming.</p>
+    </div>
+    
+  </div>
   );
 }

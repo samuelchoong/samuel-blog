@@ -5,7 +5,7 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: "Samuel Choong",
+    title: "Personal Tech Blog",
     description: "Documenting the evolution of web programming and the guy who chase after it",
     siteUrl: process.env.BASE_URL,
     body: {
@@ -13,6 +13,9 @@ module.exports = {
     }
   },
   plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     "gatsby-plugin-sass",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-netlify-cms",

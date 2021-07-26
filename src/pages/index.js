@@ -11,17 +11,13 @@ export default function IndexPage({data,pageContext}) {
     return (
         <Layout>
             <Seo
-                title="Home"
+                title="Samuel Choong"
                 description="Software engineer and tech entrepreneur. Documenting the process while creating multi-winning products"
             />
-           <div className="columns">
-               {
-                   nodes.slice(0,2).map(node=>
-                        <div key={node.id} className="column">
-                            <FeaturedBlog blog={node}/>
-                        </div>
-                   )
-               }
+           <div className="columns is-vcentered">
+                <div className="column">
+                    <FeaturedBlog/>
+                </div>
            </div>
            <div className="p-4">
                <BlogListing 
